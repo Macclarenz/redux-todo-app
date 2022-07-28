@@ -1,0 +1,19 @@
+@use '../abstracts' as abs;
+
+.input-todo-form {
+    & > button[type=submit] {
+        @include abs.flex(center, center);
+        @include abs.resetInput(pointer);
+        background-image: abs.$gradient;
+        border-radius: 50%;
+        position: absolute;
+        min-height: 30px;
+        min-width: 30px;
+        margin-left: .5em;
+
+        & > svg {
+            transform: scale(1.5);
+            fill: abs.$white;
+        }
+    }
+}

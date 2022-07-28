@@ -1,0 +1,49 @@
+@use '../abstracts/' as abs;
+
+:where(.incomplete-todo-container, .complete-todo-container) button:first-child {
+    @include abs.flex(center, center);
+    background-color: abs.$white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: .5em;
+    position: relative;
+    outline: 1px solid abs.$light-blue;
+    outline-offset: -1px;
+    overflow: hidden;
+    transition: all 300ms ease;
+    min-height: 30px;
+    min-width: 30px;
+
+    &::before {
+        content: '';
+        background-image: abs.$gradient;
+        border-radius: 50%;
+        padding: 1em;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        transform: scale(0);
+        transition: all 300ms ease;
+    }
+
+    svg {
+        fill: abs.$light-blue;
+        transform: scale(1.25);
+        transition: all 300ms ease;
+    }
+
+    &:hover, &:focus {
+        &::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        svg {
+            fill: abs.$white;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@use '../abstracts/' as abs;
+
+.complete-todo-item, 
+.incomplete-todo-item {
+    @include abs.flex(flex-start, center, row);
+
+    &:not(:first-child) {
+        border-top: 1px solid abs.$lighter-grey;
+        margin-top: 0.5em;
+        padding-top: 0.5em;
+    }
+
+    & > button:first-child {
+        margin-right: 0.5em;
+    }
+
+    & > p {
+        width: 100%;
+    }
+}
+
+.complete-todo-item p {
+    text-decoration: line-through;
+}

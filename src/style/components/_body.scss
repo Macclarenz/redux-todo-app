@@ -1,0 +1,12 @@
+@use '../abstracts/' as abs;  
+
+$color-1: #5800FF;
+$color-2: #0096FF;
+$color-3: #00D7FF;
+$color-4: #72FFFF;
+
+
+.outer-container {
+    @include abs.flex(center, center, column);
+    min-height: 100vh;
+}

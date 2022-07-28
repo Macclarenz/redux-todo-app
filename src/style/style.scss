@@ -1,0 +1,14 @@
+@use './components/body';
+@use './components/fonts';
+@use './components/todoInput';
+@use './components/todoContainer';
+@use './components/buttons';
+@use './components/removeButtons';
+@use './components/addButtons';
+@use './components/todo';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}

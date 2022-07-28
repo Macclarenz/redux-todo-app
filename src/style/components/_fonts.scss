@@ -1,0 +1,15 @@
+@use '../abstracts/' as abs;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:where(.outer-container) p, h2, li, input {
+    font-family: 'Open Sans', sans-serif;
+}
+
+:where(.outer-container) h2 {
+    color: abs.$black;
+    font-weight: 600;
+}
+
+:where(.outer-container) p, li {
+    color: abs.$lighter-black;
+}

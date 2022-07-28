@@ -1,0 +1,22 @@
+@use '../abstracts/' as abs;
+
+:where(.incomplete-todo-item, .complete-todo-item) button:last-child {
+    @include abs.flex(center, center, row);
+    @include abs.resetInput(pointer);
+    border-radius: 50%;
+    margin-left: .25em;
+    min-height: 30px;
+    min-width: 30px;
+
+    & > svg {
+        fill: abs.$grey;
+        transform: scale(1.5);
+        transition: all 300ms ease;
+    }
+
+    &:hover {
+        & > svg {
+            fill: abs.$black;
+        }
+    }
+}

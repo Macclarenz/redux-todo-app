@@ -1,0 +1,39 @@
+@use '../abstracts/' as abs;
+
+.todo-container {
+    @include abs.centerElement(min(450px, 90%));
+    border: 1px solid abs.$light-blue;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.input-todo-container {
+    background-image: abs.$gradient-2;
+    padding-block: .45em;
+
+    .input-todo-form {
+        @include abs.flex(space-between, center, row);
+        padding: 1em 5%;
+        position: relative;
+    }
+}
+
+.complete-todo-container, 
+.incomplete-todo-container {
+    @include abs.centerElement();
+
+    & > h2 {
+        margin-top: .5em;
+    }
+}
+
+.incomplete-todo-container {
+    margin-top: 1em;
+    border-top: 1px solid abs.$light-blue;
+}
+
+.complete-todo-list,
+.incomplete-todo-list {
+    margin-block: .5em 1em;
+}
+

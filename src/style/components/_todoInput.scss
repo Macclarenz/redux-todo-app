@@ -1,0 +1,13 @@
+@use '../abstracts/' as abs;
+
+.input-todo-form {
+    & > input[type=text] {
+        @include abs.resetInput();
+        background-color: abs.$white;
+        border-radius: 1.5em;
+        font-size: 16px;
+        padding: .75em 1em;
+        text-indent: 1.75em;
+        width: 100%;
+    }
+}

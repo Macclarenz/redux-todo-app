@@ -1,0 +1,216 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style/style.scss ***!
+  \***************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap);
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style/style.scss (1) ***!
+  \*******************************************************************************************************************/
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  min-height: 100vh;
+}
+
+:where(.outer-container) p, h2, li, input {
+  font-family: "Open Sans", sans-serif;
+}
+
+:where(.outer-container) h2 {
+  color: rgb(27, 27, 27);
+  font-weight: 600;
+}
+
+:where(.outer-container) p, li {
+  color: rgb(51, 51, 51);
+}
+
+.input-todo-form > input[type=text] {
+  border: none;
+  background-color: transparent;
+  cursor: initial;
+  outline: none;
+  background-color: white;
+  border-radius: 1.5em;
+  font-size: 16px;
+  padding: 0.75em 1em;
+  text-indent: 1.75em;
+  width: 100%;
+}
+
+.todo-container {
+  margin: 0 auto;
+  width: min(450px, 90%);
+  border: 1px solid #0096FF;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.input-todo-container {
+  background-image: linear-gradient(#0096FF, #5800FF);
+  padding-block: 0.45em;
+}
+.input-todo-container .input-todo-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 1em 5%;
+  position: relative;
+}
+
+.complete-todo-container,
+.incomplete-todo-container {
+  margin: 0 auto;
+  width: 90%;
+}
+.complete-todo-container > h2,
+.incomplete-todo-container > h2 {
+  margin-top: 0.5em;
+}
+
+.incomplete-todo-container {
+  margin-top: 1em;
+  border-top: 1px solid #0096FF;
+}
+
+.complete-todo-list,
+.incomplete-todo-list {
+  margin-block: 0.5em 1em;
+}
+
+:where(.incomplete-todo-container, .complete-todo-container) button:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0.5em;
+  position: relative;
+  outline: 1px solid #0096FF;
+  outline-offset: -1px;
+  overflow: hidden;
+  transition: all 300ms ease;
+  min-height: 30px;
+  min-width: 30px;
+}
+:where(.incomplete-todo-container, .complete-todo-container) button:first-child::before {
+  content: "";
+  background-image: linear-gradient(#00D7FF, #5800FF);
+  border-radius: 50%;
+  padding: 1em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 300ms ease;
+}
+:where(.incomplete-todo-container, .complete-todo-container) button:first-child svg {
+  fill: #0096FF;
+  transform: scale(1.25);
+  transition: all 300ms ease;
+}
+:where(.incomplete-todo-container, .complete-todo-container) button:first-child:hover::before, :where(.incomplete-todo-container, .complete-todo-container) button:first-child:focus::before {
+  opacity: 1;
+  transform: scale(1);
+}
+:where(.incomplete-todo-container, .complete-todo-container) button:first-child:hover svg, :where(.incomplete-todo-container, .complete-todo-container) button:first-child:focus svg {
+  fill: white;
+}
+
+:where(.incomplete-todo-item, .complete-todo-item) button:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50%;
+  margin-left: 0.25em;
+  min-height: 30px;
+  min-width: 30px;
+}
+:where(.incomplete-todo-item, .complete-todo-item) button:last-child > svg {
+  fill: grey;
+  transform: scale(1.5);
+  transition: all 300ms ease;
+}
+:where(.incomplete-todo-item, .complete-todo-item) button:last-child:hover > svg {
+  fill: rgb(27, 27, 27);
+}
+
+.input-todo-form > button[type=submit] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  background-image: linear-gradient(#00D7FF, #5800FF);
+  border-radius: 50%;
+  position: absolute;
+  min-height: 30px;
+  min-width: 30px;
+  margin-left: 0.5em;
+}
+.input-todo-form > button[type=submit] > svg {
+  transform: scale(1.5);
+  fill: white;
+}
+
+.complete-todo-item,
+.incomplete-todo-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.complete-todo-item:not(:first-child),
+.incomplete-todo-item:not(:first-child) {
+  border-top: 1px solid rgba(128, 128, 128, 0.493);
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+}
+.complete-todo-item > button:first-child,
+.incomplete-todo-item > button:first-child {
+  margin-right: 0.5em;
+}
+.complete-todo-item > p,
+.incomplete-todo-item > p {
+  width: 100%;
+}
+
+.complete-todo-item p {
+  text-decoration: line-through;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map*/
