@@ -2233,7 +2233,7 @@ function AllTodo(_ref) {
     className: "incomplete-todo-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Incomplete todo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: "incomplete-todo-list"
-  }, (todos === null || todos === void 0 ? void 0 : todos.length) && todos.map(function (todo) {
+  }, todos !== null && todos !== void 0 && todos.length ? todos.map(function (todo) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
       key: "incomplete-todo-".concat(todo.id),
       className: "incomplete-todo-item"
@@ -2252,7 +2252,7 @@ function AllTodo(_ref) {
         }
       }
     }));
-  })));
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "No todo yet.")));
 }
 
 /***/ }),
@@ -2377,7 +2377,7 @@ function CompleteTodos(_ref) {
     className: "complete-todo-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Complete todo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: "complete-todo-list"
-  }, (todos === null || todos === void 0 ? void 0 : todos.length) && todos.map(function (todo) {
+  }, todos !== null && todos !== void 0 && todos.length ? todos.map(function (todo) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
       key: "complete-todo-".concat(todo.id),
       className: "complete-todo-item"
@@ -2396,7 +2396,7 @@ function CompleteTodos(_ref) {
       },
       complete: true
     }));
-  })));
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "No complete todo yet.")));
 }
 
 /***/ }),
