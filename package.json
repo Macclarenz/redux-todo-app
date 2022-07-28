@@ -1,5 +1,6 @@
 {
   "name": "complex-state",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve",
@@ -7,6 +8,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
+    "graceful-fs": "^4.2.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",

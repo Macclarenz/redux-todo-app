@@ -21,7 +21,7 @@ export default function CompleteTodos ({dispatch, todos}) {
             <h2>Complete todo</h2>
             <ul className="complete-todo-list">
                 {
-                    todos?.length && todos.map(todo => (
+                    todos?.length ? todos.map(todo => (
                     <li key={`complete-todo-${todo.id}`} className = 'complete-todo-item'> 
                         <Todo 
                             icons = {{
@@ -34,7 +34,7 @@ export default function CompleteTodos ({dispatch, todos}) {
                             }}
                             complete = {true}
                         />
-                    </li>))
+                    </li>)) : <p>No complete todo yet.</p>
                 }
             </ul>
         </div>

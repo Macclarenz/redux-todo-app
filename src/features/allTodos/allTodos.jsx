@@ -27,7 +27,7 @@ export default function AllTodo({dispatch, todos}) {
             <h2>Incomplete todo</h2>
             <ul className="incomplete-todo-list">
                 {
-                    todos?.length && todos.map(todo => (
+                    todos?.length ? todos.map(todo => (
                     <li key={`incomplete-todo-${todo.id}`} className = 'incomplete-todo-item'> 
                         <Todo 
                             icons = {{
@@ -40,7 +40,7 @@ export default function AllTodo({dispatch, todos}) {
                                 removeTodo: () => removeTodoHandler(todo)
                             }}
                         />
-                    </li>))
+                    </li>)) : <p>No todo yet.</p>
                 }
             </ul>
         </div>
